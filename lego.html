@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lego.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+</head>
+<body>
+    <header class="top-bar">
+            <a class="lego-logo" href="#" aria-label="LEGO">
+                <span class="lego-logo-red">LE</span><span class="lego-logo-green">GO</span>
+            </a>
+            <nav class="account-actions" aria-label="계정">
+                <button class="notification-button" type="button" aria-label="알림">
+                    <i data-lucide="bell" aria-hidden="true"></i>
+                </button>
+                <a class="login-button" href="#login">로그인</a>
+                <a class="signup-button" href="#signup">가입하기</a>
+            </nav>
+        </header>       
+    <main>    
+        <section class="product-section" aria-labelledby="product-title">
+            <h1 id="product-title">레고 상품</h1>
+            <div class="product-carousel">
+                <div class="product-list swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-products">
+                                <article class="product-card">
+                                    <img class="product-image" src="batman.jpg" alt="레고 배트맨 2 배트모빌 세트">
+                                    <h2>배트맨 2</h2>
+                                    <p>배트맨으로 무한한 상상력을 펼쳐보세요.</p>
+                                    <strong>₩189,000</strong>
+                                </article>
+
+                                <article class="product-card">
+                                    <img class="product-image" src="harry-potter.jpg" alt="레고 해리포터 호그와트 성 세트">
+                                    <h2>해리포터</h2>
+                                    <p>해리포터와 함께 흥미진진한 모험을 시작하세요.</p>
+                                    <strong>₩330,000</strong>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-products">
+                                <article class="product-card">
+                                    <img class="product-image" src="pikachu.jpg" srcset="https://www.lego.com/cdn/cs/set/assets/bltf3e8aa72ea1a8b3b/blt3435be8c14df0276-72154_boxprod_v29.png 1x" alt="레고 포켓몬 트레이너 저니 : 몬스터볼">
+                                    <h2>포켓몬 트레이너 저니 : 몬스터볼</h2>
+                                    <p>포켓몬과 함께하는 즐거운 모험을 시작하세요.</p>
+                                    <strong>₩239,900</strong>
+                                </article>
+
+                                <article class="product-card">
+                                    <img class="product-image" src="https://www.lego.com/cdn/cs/set/assets/blt489c18200011734c/10365_boxprod_v39_en-gb.png" alt="레고 잭 스패로우 해적선">
+                                    <h2>잭스패로우 해적선</h2>
+                                    <p>잭스패로우의 해적선으로 모험을 떠나세요.</p>
+                                    <strong>₩499,900</strong>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-navigation" aria-label="상품 슬라이드 탐색">
+                    <button class="product-navigation-button product-prev" type="button" aria-label="이전 슬라이드">
+                        <i data-lucide="chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button class="product-navigation-button product-next" type="button" aria-label="다음 슬라이드">
+                        <i data-lucide="chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="news-section" aria-labelledby="news-title">
+            <h2 id="news-title">레고 주요 소식</h2>
+            <article class="news-card">
+                <span class="news-label">이벤트</span>
+                <h3>레고 신제품 출시 기념 이벤트</h3>
+                <p>새로운 레고 세트를 만나보세요! 공식 스토어에서 신제품과 특별한 혜택을 확인할 수 있습니다.</p>
+                <a href="#event">이벤트 자세히 보기</a>
+            </article>
+            <article class="news-card">
+                <span class="news-label">새 소식</span>
+                <h3>상상력을 현실로 만드는 새로운 이야기</h3>
+                <p>좋아하는 캐릭터와 함께 나만의 모험을 만들고 창의적인 놀이의 즐거움을 경험해 보세요.</p>
+                <a href="#news">레고 소식 더 보기</a>
+            </article>
+        </section>
+    </main>
+    <footer class="business-info" aria-label="사업자 정보">
+        <p>상호명: 레고코리아(주)</p>
+        <p>대표자: 대표이사</p>
+        <p>사업자등록번호: 000-00-00000</p>
+        <p>통신판매업 신고번호: 제0000-서울-0000호</p>
+        <p>주소: 서울특별시</p>
+        <p>고객센터: 0000-0000</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        lucide.createIcons();
+        new Swiper(".product-list", {
+            slidesPerView: 1,
+            a11y: {
+                prevSlideMessage: "이전 슬라이드",
+                nextSlideMessage: "다음 슬라이드"
+            },
+            navigation: {
+                nextEl: ".product-next",
+                prevEl: ".product-prev"
+            }
+        });
+    </script>
+</body>
+</html>
